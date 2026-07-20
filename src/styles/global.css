@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "Portia";
+  src:
+    url("../../public/fonts/PortiaRegular.woff2") format("woff2"),
+    url("../../public/fonts/PortiaRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  ascent-override: 100%; /* Fixes font spacing issue */
+}
+
+@font-face {
+  font-family: "Jost";
+  src:
+    url("../../public/fonts/Jost-Regular.woff2") format("woff2"),
+    url("../../public/fonts/Jost-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-display: "Portia", serif;
+  --font-body: "Jost", sans-serif;
+
+  /* Colors */
+  --color-linen-100: #f4f1ea;
+  --color-linen-300: #e8e2d5;
+  --color-linen-500: #c2b8a3;
+  --color-ink-400: #59534d;
+  --color-ink-600: #332e2a;
+  --color-ink-900: #141210;
+  --color-brass-400: #cfa454;
+  --color-brass-600: #9c7939;
+  --color-crimson-500: #7a191b;
+  --color-white-100: #ffffff;
+
+  --bg-primary: var(--color-linen-100);
+  --bg-secondary: var(--color-linen-300);
+
+  --text-display: var(--color-ink-900);
+  --text-body: var(--color-ink-600);
+  --text-inverse: var(--color-ink-400);
+  --text-hover: var(--color-brass-400);
+
+  --action-primary: var(--color-brass-400);
+  --action-primary-hover: var(--color-brass-600);
+  --border-subtle: var(--color-linen-500);
+
+  --space-xs: 0.4rem;
+  --space-sm: 0.8rem;
+  --space-md: 1.6rem;
+  --space-lg: 2.4rem;
+  --space-xl: 3.2rem;
+  --space-xxl: 4.8rem;
+  --space-xxxl: 6.4rem;
+
+  --text-sm: clamp(1.2rem, 1.143rem + 0.179vw, 1.4rem);
+  --text-base: clamp(1.4rem, 1.343rem + 0.179vw, 1.6rem);
+  --text-lg: clamp(1.8rem, 1.63rem + 0.54vw, 2.4rem);
+  --text-xl: clamp(2.4rem, 2.17rem + 0.71vw, 3.2rem);
+  --text-xxl: clamp(var(--space-xl), 2.971rem + 0.714vw, 4rem);
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--text-body);
+  background-color: var(--bg-primary);
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 var(--space-md);
+  margin: 0 auto;
+}
+
+.page-view {
+  padding-block: var(--space-lg);
+}
