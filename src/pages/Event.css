@@ -1,0 +1,10 @@
+.event {
+  padding-block: clamp(var(--space-xl), 2.743rem + 1.429vw, var(--space-xxl));
+  background-color: var(--bg-primary);
+}
+
+.event__inner {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
