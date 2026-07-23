@@ -1,5 +1,6 @@
 import { Navbar } from "./components/Navbar.js";
 import { About } from "./pages/About.js";
+import { Event } from "./pages/Event.js";
 import { Home } from "./pages/Home.js";
 import { Menu } from "./pages/Menu.js";
 
@@ -26,7 +27,12 @@ const loadMenu = () => {
   content.append(Menu());
 };
 
-const navComponent = Navbar(loadHome, loadMenu, loadAbout);
+const loadEvent = () => {
+  clearContent();
+  content.append(Event());
+};
+
+const navComponent = Navbar(loadHome, loadMenu, loadAbout, loadEvent);
 document.body.append(navComponent, content);
 
 loadHome();
