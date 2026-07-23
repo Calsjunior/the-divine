@@ -1,8 +1,12 @@
 // https://kyleshevlin.com/how-to-write-your-own-javascript-dom-element-factory/
 export const createElement = (type, props = {}, ...children) => {
-  const element = document.createElement(type);
+  const isFragment = type === "FRAG";
+  const element = isFragment
+    ? document.createDocumentFragment()
+    : document.createElement(type);
 
-  for (const key in props) {
+  const validProps = !isFragment && props ? props : {};
+  for (const key in validProps) {
     if (key.startsWith("on")) {
       element.addEventListener(key.slice(2).toLowerCase(), props[key]);
     } else if (key === "classes") {
