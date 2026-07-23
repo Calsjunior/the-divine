@@ -8,6 +8,8 @@
   --nav-line-offset: clamp(0.2rem, 0.143rem + 0.179vw, var(--space-xs));
 
   position: relative;
+  display: flex;
+  height: var(--nav-height);
   padding-block: clamp(1rem, 0.829rem + 0.536vw, var(--space-md));
   background-color: var(--nav-bg);
   border-block-end: 2px solid var(--nav-border);
