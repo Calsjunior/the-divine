@@ -59,7 +59,8 @@
   --text-base: clamp(1.4rem, 1.343rem + 0.179vw, 1.6rem);
   --text-lg: clamp(1.8rem, 1.63rem + 0.54vw, 2.4rem);
   --text-xl: clamp(2.4rem, 2.17rem + 0.71vw, 3.2rem);
-  --text-xxl: clamp(var(--space-xl), 2.971rem + 0.714vw, 4rem);
+  --text-xxl: clamp(var(--space-xl), 2.971rem + 0.714vw, 4.8rem);
+  --text-xxxl: clamp(var(--space-xxl), 4.343rem + 1.429vw, var(--space-xxxl));
 }
 
 body {
