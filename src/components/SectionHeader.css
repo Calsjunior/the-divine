@@ -1,0 +1,15 @@
+.section__eyebrow {
+  margin-block-end: clamp(var(--space-sm), 0.571rem + 0.714vw, var(--space-md));
+  font-size: var(--text-sm);
+  color: var(--action-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
+
+.section__title {
+  margin-block-end: clamp(var(--space-lg), 2.171rem + 0.714vw, var(--space-xl));
+  font-family: var(--font-display);
+  font-size: var(--text-xxl);
+  color: var(--text-display);
+  text-transform: uppercase;
+}
