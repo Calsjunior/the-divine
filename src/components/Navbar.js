@@ -3,6 +3,11 @@ import { createElement } from "../utils/dom.js";
 import "./Navbar.css";
 
 export function Navbar(onLogoClick, onMenuClick, onAboutClick, onEventClick) {
+  const closeMenu = () => {
+    navList.classList.remove("nav__list--open");
+    btnToggle.classList.remove("nav__toggle--open");
+  };
+
   const navItems = [
     { text: "Menu", onClick: onMenuClick },
     { text: "About", onClick: onAboutClick },
@@ -18,7 +23,13 @@ export function Navbar(onLogoClick, onMenuClick, onAboutClick, onEventClick) {
         {},
         createElement(
           "button",
-          { classes: ["nav__button"], onClick: item.onClick },
+          {
+            classes: ["nav__button"],
+            onClick: () => {
+              item.onClick();
+              closeMenu();
+            },
+          },
           item.text,
         ),
       ),
@@ -50,7 +61,13 @@ export function Navbar(onLogoClick, onMenuClick, onAboutClick, onEventClick) {
         { classes: ["container", "nav__inner"] },
         createElement(
           "button",
-          { classes: ["nav__logo"], onClick: onLogoClick },
+          {
+            classes: ["nav__logo"],
+            onClick: () => {
+              onLogoClick();
+              closeMenu();
+            },
+          },
           "The Divine",
         ),
         btnToggle,
