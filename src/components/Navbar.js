@@ -52,27 +52,23 @@ export function Navbar(onLogoClick, onMenuClick, onAboutClick, onEventClick) {
 
   return createElement(
     "header",
-    {},
+    { classes: ["nav"] },
     createElement(
       "nav",
-      { classes: ["nav"] },
+      { classes: ["container", "nav__inner"] },
       createElement(
-        "div",
-        { classes: ["container", "nav__inner"] },
-        createElement(
-          "button",
-          {
-            classes: ["nav__logo"],
-            onClick: () => {
-              onLogoClick();
-              closeMenu();
-            },
+        "button",
+        {
+          classes: ["nav__logo"],
+          onClick: () => {
+            onLogoClick();
+            closeMenu();
           },
-          "The Divine",
-        ),
-        btnToggle,
-        navList,
+        },
+        "The Divine",
       ),
+      btnToggle,
+      navList,
     ),
   );
 }
