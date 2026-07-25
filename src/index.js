@@ -8,8 +8,14 @@ import "./styles/reset.css";
 import "./styles/global.css";
 
 const content = document.querySelector("#content");
+
 const clearContent = () => {
   content.innerHTML = "";
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
 };
 
 const loadHome = () => {
